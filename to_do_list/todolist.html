@@ -11,12 +11,13 @@
 
     <div class="main_wrapper">
       <div class="to_do_div">
-        <div class="wrapper_btn">
-          <h3>할 일</h3>
-          <button class="add_button" onclick="addList()">추가</button>
-          <button class="del_button" onclick="">삭제</button>
+        <div class="wrapper_top_area">
+          <span style="font-weight: bold;">할 일</span>
+          <div class="wrapper_btn">
+            <button class="add_button" onclick="addList()">추가</button>
+            <button class="del_button" onclick="">삭제</button>
+          </div>
         </div>
-
         <ul id="main_ul">
           <li id="main_li" class="main_li_list">
             <input type="checkbox" onclick="completeList(this)" />

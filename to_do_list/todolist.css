@@ -10,14 +10,15 @@ ul {
 }
 
 .wrapper_btn {
-  height: 50px;
+  width: 50%;
   border: 1px solid maroon;
+  background-color: aqua;
   display: flex;
+  justify-content: end;
 }
 
 button {
-  color: red;
-  justify-content: left;
+  color: red;  
 }
 
 .to_do_div {
