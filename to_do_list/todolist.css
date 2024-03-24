@@ -1,0 +1,21 @@
+ul {
+  list-style-type: none;
+}
+
+.main_wrapper {
+  border: 1px solid tomato;
+  display: flex;
+  height: 300px;
+  width: 300px;
+}
+
+.wrapper_btn {
+  height: 50px;
+  border: 1px solid maroon;
+  display: flex;
+}
+
+button {
+  color: red;
+  justify-content: left;
+}
