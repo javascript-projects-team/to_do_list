@@ -19,3 +19,10 @@ button {
   color: red;
   justify-content: left;
 }
+
+.to_do_div {
+  background-color: lightgoldenrodyellow;
+  border: 1px solid tomato;
+  height: 300px;
+  width: 300px;
+}
