@@ -7,12 +7,10 @@ const addButtonClickEvent = () => {
   const radioInput = document.createElement(`input`);
   radioInput.setAttribute(`type`, `radio`);
   list.append(radioInput);
-
   const textInput = document.createElement(`input`);
   textInput.setAttribute(`type`, ``);
   textInput.setAttribute(`class`, `text_area`);
   list.append(textInput);
-
   const delBtn = document.createElement(`button`);
   delBtn.append(`삭제`);
   delBtn.setAttribute(`class`, `del_btn`);
