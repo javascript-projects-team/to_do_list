@@ -1,29 +1,59 @@
-ul {
-  list-style-type: none;
+h1,
+h2,
+div {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .main_wrapper {
-  border: 1px solid tomato;
+  background-color: beige;
+  width: 1000px;
+  height: 600px;
+  padding-top: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title_wrapper {
+  font-size: large;
+  font-weight: bold;
+}
+
+.content_wrapper {
   display: flex;
-  height: 300px;
-  width: 300px;
+  .text_area {
+    width: 250px;
+  }
+  .del_btn {
+    background-color: #ff5f49;
+    color: white;
+    border-radius: 10px;
+    margin-left: 5px;
+  }
 }
 
-.wrapper_btn {
-  width: 50%;
-  border: 1px solid maroon;
-  background-color: aqua;
+.do_it_wrapper {
+  background-color: lightpink;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.complete_wrapper {
+  background-color: lightblue;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.add_btn {
+  border: 1px solid salmon;
+  background-color: #db72cf;
+  color: white;
+  font-size: large;
+  border-radius: 10%;
   display: flex;
-  justify-content: end;
-}
-
-button {
-  color: red;  
-}
-
-.to_do_div {
-  background-color: lightgoldenrodyellow;
-  border: 1px solid tomato;
-  height: 300px;
-  width: 300px;
+  align-items: center;
+  margin: 10px auto;
 }
