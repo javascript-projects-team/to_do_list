@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="favicon icon" type="image/x-icon" href="favicon.ico" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>To Do List</h1>
+      <div class="input-wrapper">
+        <input type="text" id="input-box" placeholder="내용을 입력하세요" /
+       >
+        <input
+          type="button"
+          id="input-button"
+          value="+"
+        />
+      </div>
+    </header>
+    <main>
+      <ul class="to-do-list">
+        <li>
+          <input
+            type="checkbox"
+            class="checkbox"
+          />
+          <span>프론트엔드 ui 그리기</span>
+          <img
+            src="./asset/trash.png"
+            width="20"
+            height="20"
+            alt="my image"
+          />
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            class="checkbox"
+            onclick="onClickCheckbox(this)"
+          />
+          <span>운동하기</span>
+          <img
+          src="./asset/trash.png"
+            width="20"
+            height="20"
+            alt="my image"
+          />
+        </li>
+        <li>
+            <input
+              type="checkbox"
+              class="checkbox"
+              onclick="onClickCheckbox(this)"
+            />
+            <span>공부하기</span>
+            <img
+              src="./asset/trash.png"
+              width="20"
+              height="20"
+              alt="my image"
+            />
+          </li>
+      </ul>
+    </main>
+  </body>
+  <script relscript type="text/javascript" src="index.js"></script>
+</html>
