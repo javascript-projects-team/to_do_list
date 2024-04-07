@@ -1,7 +1,7 @@
 h1,
 h2,
 div {
-  font-family: "Gaegu", sans-serif;
+  font-family: 'Gaegu', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -25,8 +25,16 @@ div {
   .text_area {
     width: 250px;
   }
+  .save_btn {
+    background-color: cornflowerblue;
+  }
+  .modify_btn {
+    background-color: coral;
+  }
   .del_btn {
     background-color: #ff5f49;
+  }
+  .button_public {
     color: white;
     border-radius: 10px;
     margin-left: 5px;
@@ -56,4 +64,8 @@ div {
   display: flex;
   align-items: center;
   margin: 10px auto;
+}
+
+.input_disabled {
+  background-color: #db72cf;
 }
