@@ -23,7 +23,7 @@ html, body {
     font-size: larger;
   }
   
-  #input-button {
+  #addBtn {
     height: 45px;
     width: 40px;
     font-size: 1.5em;

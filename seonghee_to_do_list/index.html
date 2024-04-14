@@ -14,12 +14,15 @@
     <header>
       <h1>To Do List</h1>
       <div class="input-wrapper">
-        <input type="text" id="input-box" placeholder="내용을 입력하세요" /
+        <input type="text" id="input-box" 
+        
+        placeholder="내용을 입력하세요" /
        >
         <input
           type="button"
-          id="input-button"
+          id="addBtn"
           value="+"
+          onclick={plusButton()}
         />
       </div>
     </header>
@@ -29,6 +32,7 @@
           <input
             type="checkbox"
             class="checkbox"
+            onclick={checkedDelete(this)}
           />
           <span>프론트엔드 ui 그리기</span>
           <img
@@ -42,7 +46,7 @@
           <input
             type="checkbox"
             class="checkbox"
-            onclick="onClickCheckbox(this)"
+            onclick={checkedDelete(this)}
           />
           <span>운동하기</span>
           <img
@@ -50,13 +54,14 @@
             width="20"
             height="20"
             alt="my image"
+            onclick=""
           />
         </li>
         <li>
             <input
               type="checkbox"
               class="checkbox"
-              onclick="onClickCheckbox(this)"
+              onclick={checkedDelete(this)}
             />
             <span>공부하기</span>
             <img
@@ -71,3 +76,4 @@
   </body>
   <script relscript type="text/javascript" src="index.js"></script>
 </html>
+
