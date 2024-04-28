@@ -22,13 +22,14 @@
           type="button"
           id="addBtn"
           value="+"
-          onclick={plusButton()}
+          onclick={addTask()}
         />
       </div>
     </header>
     <main>
-      <ul class="to-do-list">
-        <li>
+   
+      <ul class="to-do-list" id= "to-do-list">
+        <!-- <li>
           <input
             type="checkbox"
             class="checkbox"
@@ -40,6 +41,7 @@
             width="20"
             height="20"
             alt="my image"
+            onclick={removeList(this)}
           />
         </li>
         <li>
@@ -54,7 +56,7 @@
             width="20"
             height="20"
             alt="my image"
-            onclick=""
+            onclick={removeList(this)}
           />
         </li>
         <li>
@@ -69,9 +71,11 @@
               width="20"
               height="20"
               alt="my image"
+              onclick={removeList(this)}
             />
-          </li>
+          </li> -->
       </ul>
+    
     </main>
   </body>
   <script relscript type="text/javascript" src="index.js"></script>
