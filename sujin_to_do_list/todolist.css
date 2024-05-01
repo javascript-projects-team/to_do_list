@@ -1,7 +1,7 @@
 h1,
 h2,
 div {
-  font-family: 'Gaegu', sans-serif;
+  font-family: "Gaegu", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -46,6 +46,7 @@ div {
   width: 400px;
   height: 400px;
   margin: 0 auto;
+  overflow: auto;
 }
 
 .complete_wrapper {
@@ -53,6 +54,7 @@ div {
   width: 400px;
   height: 400px;
   margin: 0 auto;
+  overflow: auto;
 }
 
 .add_btn {

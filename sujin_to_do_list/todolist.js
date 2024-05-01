@@ -1,12 +1,29 @@
 const list = document.getElementById(`to_do_list`);
 
 let i = 1;
+const date = new Date();
 
+const today =
+  date.getMonth() +
+  1 +
+  "/" +
+  date.getDate() +
+  "_" +
+  (String(date.getHours()).length < 2
+    ? "0" + date.getHours()
+    : date.getHours()) +
+  ":" +
+  (String(date.getMinutes()) < 2 ? "0" + date.getMinutes() : date.getMinutes());
+
+/**
+ * 완료된 일 목록에서 라디오 버튼 클릭
+ * @param {*} clickItem
+ */
 const completeRadioBtnClick = (clickItem) => {
   const completeRadioBtn = document.getElementById(`${clickItem}_radio`);
   completeRadioBtn.checked = false;
   completeRadioBtn.removeAttribute("onclick");
-  completeRadioBtn.setAttribute("onclick", `completeRadioClick(${clickItem})`);
+  completeRadioBtn.setAttribute("onclick", `(${clickItem})`);
   const completeClickInput = document.getElementById(`${clickItem}_text_input`);
   const completeDelBtn = document.getElementById(`${clickItem}_del_button`);
   const modifyBtn = document.createElement(`button`);
@@ -23,6 +40,7 @@ const completeRadioBtnClick = (clickItem) => {
   doItList.append(completeClickInput);
   doItList.append(modifyBtn);
   doItList.append(completeDelBtn);
+  doItList.append(today);
 };
 
 /**
@@ -39,9 +57,16 @@ const completeRadioClick = (clickItem) => {
   );
   const completeClickInput = document.getElementById(`${clickItem}_text_input`);
   const completeDelBtn = document.getElementById(`${clickItem}_del_button`);
+  const dateSpan = document.getElementById(`${clickItem}_span_date`);
+
+  const diff = Math.ceil((new Date().getTime() - date.getTime()) / (60 * 1000));
+  dateSpan.innerText = "(" + diff + "분)";
   completeList.append(completeRadioBtn);
   completeList.append(completeClickInput);
   completeList.append(completeDelBtn);
+  completeList.append(dateSpan);
+
+  completeList.append(document.createElement("br"));
   delButtonClickEvent(clickItem, "radioEvent");
 };
 
@@ -61,6 +86,7 @@ const listSaveButtonClickEvent = (clickItem) => {
   const modifyBtn = document.createElement(`button`);
   const deleteBtn = document.createElement("button");
   const brTag = document.createElement(`br`);
+  const dateString = document.createElement(`span`);
 
   const clickInput = document.getElementById(`${clickItem}_text_input`);
   clickInput.setAttribute("disabled", "");
@@ -86,7 +112,12 @@ const listSaveButtonClickEvent = (clickItem) => {
   deleteBtn.textContent = "삭제";
   list.append(deleteBtn);
 
+  dateString.setAttribute("id", `${clickItem}_span_date`);
+  dateString.textContent = today;
+  console.log(dateString);
   brTag.setAttribute("id", `${clickItem}_br`);
+  list.append(brTag);
+  list.append(dateString);
   list.append(brTag);
 };
 
@@ -147,6 +178,9 @@ const delButtonClickEvent = (itemNum, eventName) => {
     if (document.getElementById(`${itemNum}_del_button`) !== null) {
       document.getElementById(`${itemNum}_del_button`).remove();
     }
+    if (document.getElementById(`${itemNum}_span_date`) !== null) {
+      document.getElementById(`${itemNum}_span_date`).remove();
+    }
   }
   if (document.getElementById(`${itemNum}_save_button`) !== null) {
     document.getElementById(`${itemNum}_save_button`).remove();
@@ -200,3 +234,12 @@ const addButtonClickEvent = () => {
 
   i++;
 };
+
+async function getAllData() {
+  await fetch("./list.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((res) => console.log(res));
+}
+// /Users/sujin/a_study/javascript_mini_project/sujin_to_do_list/data/list.json
