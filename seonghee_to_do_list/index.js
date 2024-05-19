@@ -52,14 +52,6 @@ function addTask() {
     listItem.parentElement.removeChild(listItem);
   }
   
-  // 체크박스 클릭 시 삭제하는 함수
-//   function checkedDelete(element) {
-//     const listItem = element.parentElement;
-//     if (element.checked) {
-//       listItem.parentElement.removeChild(listItem);
-//     }
-//   }
-
 function toggleStrikethrough(element) {
     const listItem = element.parentElement;
     const span = listItem.querySelector("span");
